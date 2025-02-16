@@ -8,4 +8,5 @@ export interface CommonRequestOptions {
   headers?: Headers | Record<string, string>
   /** @example `gpt-4o` */
   model: string
+  transformBody?: <ResponseBody>(body: any) => Promise<ResponseBody> | ResponseBody
 }
